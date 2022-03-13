@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../site 1/assets/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: rgb(2, 54, 97);
+    display: flex;
+    z-index: 99 ;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 40px;
+    padding: 20px 100px;
+    font-weight: 300;
+    font-family: 'Bebas Neue', cursive; 
+    cursor: progress;
+
+}
+
+.banner {
+    padding-top: 100px;
+}
+
+header nav {
+    padding-top: 40px;
+}
+
+header a {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    padding-left: 50px;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    transition: all .4s;
+}
+
+header .icons {
+    padding-right: 50px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+header .icons i {
+    font-size: 2rem;
+    color: white;
+}
+
+header a:hover {
+    color: black;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: rgba(53, 52, 52, 0.637);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    text-transform: uppercase;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-family: 'Arimo', sans-serif; 
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.details .search {
+    padding: 30px 50px;
+}
+#search {
+    color: white;
+    width: 350px;
+    height: 35px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(2, 54, 97);
+}
+#search::placeholder {
+    color: white;
+}
+
+.menu {
+    padding: 0 100px;
+}
+
+.sub-heading{
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    padding-top: 1rem;
+    
+}   
+
+.heading{
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+    color: rgb(73, 73, 73);
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+}
+.menu .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: red;  
+    width: 250px;  
+}
+
+.owl-theme {
+    height: 420px;
+}
+
+.owl-theme .box {
+    background: rgb(4, 46, 81);
+    border-radius: 10px;
+    height: 400px;
+}
+.owl-theme .box img {
+    width: 200px;
+    padding-left:45px;
+    padding-top:45px;
+}
+.stars {
+    padding-top: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.description {
+    padding-left: 45px;
+    padding-top: 20px;
+}
+.description p {
+    padding-top: 10px;
+    font-family: 'Arimo', sans-serif;
+    color: white;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+#btn {
+    cursor: pointer;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 120px;
+    transition: all .4s;
+}
+#btn:hover {
+    letter-spacing: .1rem;
+    width: 125px;
+}
+
+.meal {
+    padding: 0 60px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO NAME</div>
+    
+        <nav class="navigation">
+                <a href="/pages/index.html">Home</a>
+                <a href="">Meals</a>
+                <a href="">About</a>
+                <a href="">Contact us</a>
+        </nav>
+    
+        <div class="icons">
+            <i class='bx bxs-user-circle'></i>
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <div class="image">
+            <img class="image__img" src="https://pas-wordpress-media.s3.amazonaws.com/content/uploads/2019/10/24135155/Fast-Food-Restaurant-Sample-Business-Plan-1-min.jpg" alt="Bricks">
+            <div class="image__overlay image__overlay--primary">
+                <div class="image__title"><i class='bx bx-error-circle'></i></div>
+                <p class="image__description">
+                    This page is not fully available right now
+                    please click home to go back
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="details">
+        <div class="search">
+            <input type="search" name="" id="search" placeholder="Search">
+        </div>
+    </section>
+    
+    <section class="menu" id="menu">
+        <h3 class="sub-heading"> BEST SELLER </h3>
+        <h1 class="heading"> 10$ off meals for saturday </h1>     
+        
+    </section>
+
+
+   <section id="meal">
+    <div class="owl-carousel owl-theme">
+        <div class="box">
+            <div class="item">
+                <img src="https://loyaltytruth.com/wp-content/uploads/2013/10/FastFood_iStock_000016515039Small.jpg"> 
+                <div class="description">
+                    <div class="stars">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star-half'></i>
+                      <p>Example Meal</p>
+
+                      <div class="btn">
+                        <button id="btn">Order now</button>
+                    </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <img src="https://media.healthday.com/Images/icimages/FSF051H.jpg"> 
+                <div class="description">
+                    <div class="stars">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star-half'></i>
+                      <p>Example Meal</p>
+
+                      <div class="btn">
+                        <button id="btn">Order now</button>
+                    </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <img src="https://www.paulkennedydds.com/blog/wp-content/uploads/2018/06/nLuczXV-1024x683.jpg"> 
+                <div class="description">
+                    <div class="stars">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star-half'></i>
+                      <p>Example Meal</p>
+
+                      <div class="btn">
+                        <button id="btn">Order now</button>
+                    </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+        <div class="box">
+            <div class="item">
+                <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2021/02/chick-fil-a-spicy-deluxe-sandwich.jpg"> 
+                <div class="description">
+                    <div class="stars">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star-half'></i>
+                      <p>Example Meal</p>
+
+                      <div class="btn">
+                        <button id="btn">Order now</button>
+                    </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+
+    
+   </section>
+
+
+   
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin: 10, 
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: rgb(2, 54, 97);
+    display: flex;
+    z-index: 99 ;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: white;
+    letter-spacing: 5px;
+    font-size: 40px;
+    padding: 20px 100px;
+    font-weight: 300;
+    font-family: 'Bebas Neue', cursive; 
+    cursor: progress;
+
+}
+
+.banner {
+    padding-top: 100px;
+}
+
+header nav {
+    padding-top: 40px;
+}
+
+header a {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    padding-left: 50px;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    transition: all .4s;
+}
+
+header .icons {
+    padding-right: 50px;
+    padding-top: 30px;
+    cursor: pointer;
+}
+
+header .icons i {
+    font-size: 2rem;
+    color: white;
+}
+
+header a:hover {
+    color: black;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: rgba(53, 52, 52, 0.637);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    text-transform: uppercase;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-family: 'Arimo', sans-serif; 
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.details .search {
+    padding: 30px 50px;
+}
+#search {
+    color: white;
+    width: 350px;
+    height: 35px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(2, 54, 97);
+}
+#search::placeholder {
+    color: white;
+}
+
+.menu {
+    padding: 0 100px;
+}
+
+.sub-heading{
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    padding-top: 1rem;
+    
+}   
+
+.heading{
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+    color: rgb(73, 73, 73);
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1.5rem;
+}
+.menu .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: red;  
+    width: 250px;  
+}
+
+.owl-theme {
+    height: 420px;
+}
+
+.owl-theme .box {
+    background: rgb(4, 46, 81);
+    border-radius: 10px;
+    height: 400px;
+}
+.owl-theme .box img {
+    width: 200px;
+    padding-left:45px;
+    padding-top:45px;
+}
+.stars {
+    padding-top: 10px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.description {
+    padding-left: 45px;
+    padding-top: 20px;
+}
+.description p {
+    padding-top: 10px;
+    font-family: 'Arimo', sans-serif;
+    color: white;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+#btn {
+    cursor: pointer;
+    font-family: 'Arimo', sans-serif;
+    font-size: 1rem;
+    background-color: #ffffff;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 120px;
+    transition: all .4s;
+}
+#btn:hover {
+    letter-spacing: .1rem;
+    width: 125px;
+}
+
+.meal {
+    padding: 0 60px;
+}
+
+
