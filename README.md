@@ -1,1 +1,1 @@
-hi HAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Hi this is my portfolio and this page is still not available until I learn enough
