@@ -30,7 +30,7 @@ $(document).ready(function(){
   
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Hello", "Hola", "Ahn nyong ha se yo", "Salve", "Selamat siang", "Konnichiwa", "Nǐ hǎo" ,"Namaskar"],
+        strings: ["Hello", "Developer", "Designer", "Student", "From Bulacan", "CSJDM", "<333" ,"Thanks!"],
         typeSpeed: 50,
         backSpeed: 20,
         loop: true
